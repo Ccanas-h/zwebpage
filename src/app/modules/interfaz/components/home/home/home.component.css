@@ -1,7 +1,7 @@
 .container-principal {
     width: 100%;
     height: 100%;
-    padding-top: 150px;
+    padding-top: 15px;
     padding-left: 300px;
     padding-right: 300px;
     background: #FFF7F0;
@@ -82,35 +82,31 @@
 }
 
 .phone-box {
-    width: 183.44px;
-    align-self: stretch;
-    padding-top: 17px;
-    padding-bottom: 18px;
+    margin-top: 20px;
+    height: 51px;
     padding-left: 26px;
     padding-right: 25.70px;
     background: #1BA2BB;
     border-radius: 30px;
-    justify-content: center;
     align-items: center;
     display: inline-flex;
 }
 
 .phone-number {
-    width: 131.74px;
-    height: 24px;
     color: white;
     font-size: 15px;
     font-family: Jost;
     font-weight: 500;
-    line-height: 19px;
+    /* line-height: 19px; */
     letter-spacing: 0.85px;
     word-wrap: break-word;
-    white-space: nowrap; /* Evita que las palabras se vayan a una nueva línea */
+    white-space: nowrap; 
 
 }
 
 .image {
-    width: 634px;
+    /* width: 634px; */
+    border-radius: 15px;
     height: 725px;
     position: relative;
 }

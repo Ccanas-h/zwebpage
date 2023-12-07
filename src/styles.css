@@ -6,6 +6,9 @@
     src: url(assets/fonts/Jost-VariableFont_wght.ttf) ;
 }
 
-body {
+html,
+body,
+html * {
     font-size: Jost;
 }
+

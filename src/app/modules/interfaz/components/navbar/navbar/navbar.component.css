@@ -36,7 +36,7 @@
 }
 
 .logo img {
-    width: 240px;
+    /* width: 240px; */
     height: 88.55px;
     position: relative;
 }
@@ -101,39 +101,46 @@
 }
 
 .contact-container {
-    width: 183.44px;
+    /* width: 183.44px; */
     height: 51px;
-    padding-top: 13px;
-    padding-bottom: 14px;
+    /* padding-top: 13px;
+    padding-bottom: 14px; */
     padding-left: 26px;
     padding-right: 25.70px;
     background: #1BA2BB;
     border-radius: 30px;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     display: inline-flex;
+    
 }
 
-.contact {
-    width: 131.74px;
-    height: 24px;
-    color: white;
-    font-size: 17px;
-    font-family: Jost;
-    font-weight: 500;
-    line-height: 19px;
-    letter-spacing: 0.85px;
-    word-wrap: break-word;
-    white-space: nowrap; /* Evita que las palabras se vayan a una nueva línea */
-
+.contact-hover :hover{
+    /* height: 51px; */
+    /* padding-top: 13px;
+    padding-bottom: 14px; */
+    /* padding-left: 26px; */
+    /* padding-right: 25.70px; */
+    background-color: red;
+    /* border-radius: 30px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* display: inline-flex; */
 }
+
 
 .contact-number {
     color: white;
     font-size: 15px;
     font-family: Jost;
     font-weight: 500;
-    line-height: 19px;
+    /* line-height: 19px; */
     letter-spacing: 0.85px;
     word-wrap: break-word;
+    white-space: nowrap; 
+}
+
+
+.font {
+    font-family: Jost;
 }

@@ -1,32 +1,61 @@
 <div class="container-principal navbar-sticky ">
-    <nav class="inner-container container-fluid" >
-        <div class="logo-container">
-            <div class="logo" >
-                <img src="https://via.placeholder.com/240x89" alt="Logo">
+    <nav class="inner-container">
+        <div class="container-fluid logo-container">
+            <div class="logo">
+                <img src="assets/logo/logo.png" alt="Logo">
             </div>
         </div>
-        <div class="other-container">
-            <div class="nav-item-2">Acerca</div>
-            <div class="nav-item-2">
-                <div class="service">
-                    <div class="service-name">Servicios</div>
-                    <div class="service-count">3</div>
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-1"></div>
+
+                <div class="col-2 px-0">
+                    <button type="button" class="btn btn-light font">Acerca</button>
                 </div>
-            </div>
-            <div class="nav-item-2">
-                <div class="patients">
-                    <div class="patients-name">Otros</div>
-                    <div class="patients-count">3</div>
+
+                <div class="col-2 px-0 ">
+                    <div class="dropdown font" >
+                        <button class="btn btn-light dropdown-toggle" type="button" id="serviceDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Servicios
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="serviceDropdown">
+                            <li><a class="dropdown-item" href="#">Servicio 1</a></li>
+                            <li><a class="dropdown-item" href="#">Servicio 2</a></li>
+                            <li><a class="dropdown-item" href="#">Los que quieras</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="contact-container">
-                <div class="contact">
-                    <div class="contact-number">(569) 900408203</div>
+
+                <div class="col-2 px-0" >
+                    <div class="dropdown font">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="otrosDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Otros Servicios
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="otrosDropdown">
+                            <li><a class="dropdown-item" href="#">Servicio 1</a></li>
+                            <li><a class="dropdown-item" href="#">Servicio 2</a></li>
+                            <li><a class="dropdown-item" href="#">Los que quieras</a></li>
+                        </ul>
+                    </div>
                 </div>
+
+                <div class="col-1"></div>
+
+                <div class="col-2 px-0">
+                    <div class="contact-container">
+                            <div class="contact-number"><a type="button">(569) 900408203</a></div>
+                    </div>
+                </div>
+
             </div>
+
+
+
+
         </div>
     </nav>
 </div>
-
-
-
