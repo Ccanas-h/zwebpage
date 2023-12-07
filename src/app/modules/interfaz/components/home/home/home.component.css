@@ -1,0 +1,116 @@
+.container-principal {
+    width: 100%;
+    height: 100%;
+    padding-top: 150px;
+    padding-left: 300px;
+    padding-right: 300px;
+    background: #FFF7F0;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+.inner-container {
+    flex: 1 1 0;
+    height: 731.64px;
+    padding-right: 0.03px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 39.59px;
+    display: inline-flex;
+}
+
+.content-container {
+    flex: 1 1 0;
+    align-self: stretch;
+    padding-top: 217.81px;
+    padding-bottom: 217.83px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    display: inline-flex;
+}
+
+.title-container {
+    width: 640.19px;
+    height: 207px;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+}
+
+.title {
+    width: 586.64px;
+    height: 37px;
+    color: #1BA2BB;
+    font-size: 23px;
+    font-family: Jost;
+    font-weight: 600;
+    line-height: 37px;
+    word-wrap: break-word;
+    white-space: nowrap; /* Evita que las palabras se vayan a una nueva línea */
+}
+
+.spacer {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.sub-title {
+    width: 578.12px;
+    height: 87px;
+    color: black;
+    font-size: 60px;
+    font-family: Jost;
+    font-weight: 600;
+    line-height: 80px;
+    word-wrap: break-word;
+    white-space: nowrap; /* Evita que las palabras se vayan a una nueva línea */
+}
+
+.contact-container {
+    align-self: stretch;
+    height: 59px;
+    padding-right: 456.75px;
+    justify-content: flex-start;
+    align-items: center;
+    display: inline-flex;
+}
+
+.phone-box {
+    width: 183.44px;
+    align-self: stretch;
+    padding-top: 17px;
+    padding-bottom: 18px;
+    padding-left: 26px;
+    padding-right: 25.70px;
+    background: #1BA2BB;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+.phone-number {
+    width: 131.74px;
+    height: 24px;
+    color: white;
+    font-size: 15px;
+    font-family: Jost;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0.85px;
+    word-wrap: break-word;
+    white-space: nowrap; /* Evita que las palabras se vayan a una nueva línea */
+
+}
+
+.image {
+    width: 634px;
+    height: 725px;
+    position: relative;
+}
