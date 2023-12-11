@@ -9,6 +9,24 @@
 html,
 body,
 html * {
-    font-size: Jost;
+    font-family: Jost;
+    font-size: 17px;
 }
 
+
+.titulo {
+    height: 5.44rem; /* Ajusta la altura según tus necesidades */
+    color: black;
+    font-size: 3.75rem; /* Ajusta el tamaño de fuente en rem para lograr 60px */
+    font-weight: 600;
+    line-height: 5rem; /* Ajusta la altura de línea según tus necesidades */
+    word-wrap: break-word;
+    white-space: nowrap;
+}
+
+
+.spacer {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}

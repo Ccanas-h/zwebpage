@@ -54,12 +54,6 @@
     white-space: nowrap; /* Evita que las palabras se vayan a una nueva línea */
 }
 
-.spacer {
-    width: 100px;
-    height: 100px;
-    position: relative;
-}
-
 .sub-title {
     width: 578.12px;
     height: 87px;
