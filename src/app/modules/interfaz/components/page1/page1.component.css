@@ -3,3 +3,11 @@
     height: auto;
     border-radius: 30px;
 }
+
+
+.imageCarousel {
+
+    width: 500px; /* Nuevo ancho deseado para la imagen */
+    height: auto; 
+      
+  }
