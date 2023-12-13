@@ -2,7 +2,7 @@
     <nav class="inner-container">
         <div class="container-fluid logo-container">
             <div class="logo">
-                <img src="assets/logo/logo.png" alt="Logo">
+                <img src="assets/logo/logo.png" alt="Logo" [routerLink]="['/home']">
             </div>
         </div>
         <div class="container">
@@ -16,17 +16,11 @@
                 </div>
 
                 <div class="col-2 px-0 ">
-                    <div class="dropdown font" >
-                        <button class="btn btn-light dropdown-toggle" type="button" id="serviceDropdown"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                    
+                        <a class="btn btn-light" type="button" [routerLink]="['/service']" routerLinkActive="active">
                             Servicios
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="serviceDropdown">
-                            <li><a class="dropdown-item" href="#">Servicio 1</a></li>
-                            <li><a class="dropdown-item" href="#">Servicio 2</a></li>
-                            <li><a class="dropdown-item" href="#">Los que quieras</a></li>
-                        </ul>
-                    </div>
+                        </a>
+
                 </div>
 
                 <div class="col-2 px-0" >

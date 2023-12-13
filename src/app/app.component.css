@@ -1,3 +1,9 @@
 .backgroundPrincipal {
     background-color: #FFF7F0;
 }
+
+
+.content-wrapper {
+    padding: 80px 20px 20px 20px;
+    /* background: white; */
+}
