@@ -1,29 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GoogleMapsModule } from '@angular/google-maps';
-
+// import * as mapboxgl from 'mapbox-gl';
+import mapboxgl from 'mapbox-gl';
 @Component({
   selector: 'app-googlemap',
   standalone: true,
-  imports: [CommonModule, GoogleMapsModule],
+  imports: [CommonModule],
   templateUrl: './googlemap.component.html',
   styleUrl: './googlemap.component.css'
 })
+
 export class GooglemapComponent implements OnInit {
 
-  constructor() {}
-  ngOnInit(): void {}
-  center: google.maps.LatLngLiteral = {
-      lat: 24,
-      lng: 12
-  };
-  zoom = 4;
-  markerOptions: google.maps.MarkerOptions = {
-      draggable: false
-  };
-  markerPositions: google.maps.LatLngLiteral[] = [];
-  addMarker(event: google.maps.MapMouseEvent) {
-      if (event.latLng != null) this.markerPositions.push(event.latLng.toJSON());
+
+
+
+  ngOnInit(): void {
+
+    (mapboxgl as any).accessToken = 'pk.eyJ1IjoiY2NhbmFzIiwiYSI6ImNscTV4OWVoMjBubTMybG52b3Axa2ppMXQifQ.dVPS491K5PJfDht2d9O-1A';
+    const map = new mapboxgl.Map({
+      container: 'map', // container ID
+      style: 'mapbox://styles/mapbox/streets-v12', // style URL
+      center: [-70.60848278944323, -33.42219945364881], // starting position [lng, lat]
+      zoom: 17, // starting zoom
+      interactive: true,
+      maxZoom: 20,
+      minZoom: 15,
+      scrollZoom: false,
+      // trackResize: false
+      testMode: true //QUITAR ESTO EN PROD
+    });
+
+
+          // Create a default Marker and add it to the map.
+      const marker1 = new mapboxgl.Marker()
+      .setLngLat([-70.60848278944323, -33.42219945364881])
+      .addTo(map);
+
   }
-  
 }

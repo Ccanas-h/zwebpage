@@ -34,8 +34,7 @@
 </div>
 
 
-<!-- TODO FORMACION -->
-<!-- <div class="container text-center my-3 w-25">
+<!-- TODO FORMACION --><!-- <div class="container text-center my-3 w-25">
         <div class="row">
             <div class="col-12">
                 <h1>Formación</h1>
@@ -44,7 +43,7 @@
     </div> -->
 
 
-<div name="rating" class="w-100 px-5 seccion">
+<div name="rating" class="w-100 p-5 seccion">
 
   <div class="container my-3 w-50">
     <div class="row">
@@ -153,17 +152,59 @@
 
 
 
-<div name="rating" class="w-100 px-5 footer">
+<div class="w-100 py-5 px-3 footer ">
 
-  <div class="mb-4 text-center">Testimonios</div>
-
-
-  <!-- <app-googlemap></app-googlemap> -->
+  <!-- <div class="spacer"></div> -->
+  <!-- <div class="tituloWhite text-center">Ubicación</div> -->
 
 
-  <!-- <gmp-map center="-33.422279357910156,-70.60843658447266" zoom="14" map-id="DEMO_MAP_ID">
-    <gmp-advanced-marker position="-33.422279357910156,-70.60843658447266" title="My location">
-    </gmp-advanced-marker>
-  </gmp-map> -->
+  <div class="container-fluid">
+    <div class="row text-white">
+
+      <div class="col-6 text-center">
+
+        <div class="logo">
+          <img src="assets/logo/logo.png" alt="Logo" [routerLink]="['/home']">
+        </div>
+
+        <h1 class="fw-medium my-4">¡Tu sonrisa, mi compromiso!</h1>
+        <h5 class="fw-light mb-4">¡Bienvenido a mi hogar dental! <br>Te espero en mi consulta dental a pasos de Metro Los
+          Leones.</h5>
+        <button type="button" class="btn btn-outline-info btn-lg text-white rounded-pill">¡Agenda ahora!</button>
+
+      </div>
+
+
+      <div class="col-6">
+        <app-googlemap></app-googlemap>
+
+        <div class="row row-fluid mt-3">
+
+          <div class="col-12 align-items-center">
+            <p><i class="fas fa-map-marker-alt p-2 border rounded-circle"></i>&nbsp;&nbsp;Las Bellotas 199, Ofician 61,
+              Providencia, Santiago.</p>
+          </div>
+
+          <div class="col-12 align-items-center">
+            <p type="tel"><i class="fas fa-phone-alt p-2 border rounded-circle"></i>&nbsp;&nbsp;+569 9629 8044 </p>
+          </div>
+
+          <div class="col-12 align-items-center">
+            <p><i class="far fa-clock p-2 border rounded-circle"></i>&nbsp;&nbsp;Lunes-Viernes 7:30am-4pm, Viernes
+              8am-2pm</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <hr class="border border-white border-1 opacity-50">
+
+
+
+
 
 </div>
