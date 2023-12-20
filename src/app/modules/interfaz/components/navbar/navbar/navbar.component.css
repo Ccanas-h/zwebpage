@@ -35,12 +35,6 @@
     display: inline-flex;
 }
 
-.logo img {
-    /* width: 240px; */
-    height: 88.55px;
-    position: relative;
-}
-
 .other-container {
     flex: 1 1 0;
     align-self: stretch;
@@ -130,7 +124,7 @@
 
 
 .contact-number {
-    color: white;
+    color: white !important;
     font-size: 15px;
     font-family: Jost;
     font-weight: 500;
@@ -139,6 +133,11 @@
     word-wrap: break-word;
     white-space: nowrap; 
 }
+
+.contact-number:hover {
+    border-color: white; /* Cambia el color del borde a blanco en hover */
+    border: 1px solid transparent;
+  }
 
 
 .font {

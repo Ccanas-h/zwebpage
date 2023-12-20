@@ -1,31 +1,29 @@
-<div class="container-principal navbar-sticky ">
+<div class="container-principal navbar-sticky border-bottom rounded-bottom border-opacity-10 ">
     <nav class="inner-container">
         <div class="container-fluid logo-container">
             <div class="logo">
-                <img src="assets/logo/logo.png" alt="Logo" [routerLink]="['/home']">
+                <img class="border border-dark border-opacity-25 rounded-pill" src="assets/logo/logo.png" alt="Logo" [routerLink]="['/home']">
             </div>
         </div>
-        <div class="container">
+        <div class="container-fluid">
 
-            <div class="row">
+            <div class=" row row-fluid">
 
                 <div class="col-1"></div>
 
                 <div class="col-2 px-0">
-                    <button type="button" class="btn btn-light font">Acerca</button>
+                    <button type="button" class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill">Acerca</button>
                 </div>
 
                 <div class="col-2 px-0 ">
-                    
-                        <a class="btn btn-light" type="button" [routerLink]="['/service']" routerLinkActive="active">
-                            Servicios
-                        </a>
-
+                    <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button" [routerLink]="['/service']" routerLinkActive="active">
+                        Servicios
+                    </a>
                 </div>
 
-                <div class="col-2 px-0" >
-                    <div class="dropdown font">
-                        <button class="btn btn-light dropdown-toggle" type="button" id="otrosDropdown"
+                <div class="col-2 px-0">
+                    <div class="dropdown">
+                        <button class="btn fw-medium btn-light dropdown-toggle border-dark border-opacity-10 rounded-pill" type="button" id="otrosDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Otros Servicios
                         </button>
@@ -41,7 +39,11 @@
 
                 <div class="col-2 px-0">
                     <div class="contact-container">
-                            <div class="contact-number"><a type="button">(569) 900408203</a></div>
+                        <div class="contact-number">
+                            <a (click)="serv.onLinkClick()">
+                                <i class="fab fa-whatsapp fa-lg"></i>&nbsp;(569) 900408203
+                            </a>
+                        </div>
                     </div>
                 </div>
 

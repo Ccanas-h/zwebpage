@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Page1Component } from '../../page1/page1.component';
+import { AppserviceService } from '../../../services/appservice.service';
 
 @Component({
   selector: 'app-home',
@@ -13,5 +14,9 @@ import { Page1Component } from '../../page1/page1.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  constructor(public serv: AppserviceService ){
+    
+  }
 
 }

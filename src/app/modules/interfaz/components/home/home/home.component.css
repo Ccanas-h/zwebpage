@@ -86,8 +86,13 @@
     display: inline-flex;
 }
 
+.phone-box:hover {
+    border-color: white; /* Cambia el color del borde a blanco en hover */
+    border: 1px solid transparent;
+  }
+
 .phone-number {
-    color: white;
+    color: white !important;
     font-size: 15px;
     font-family: Jost;
     font-weight: 500;
@@ -95,7 +100,7 @@
     letter-spacing: 0.85px;
     word-wrap: break-word;
     white-space: nowrap; 
-
+    text-decoration: none;
 }
 
 .image {

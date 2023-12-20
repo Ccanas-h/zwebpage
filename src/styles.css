@@ -104,3 +104,14 @@ html * {
     fill: #1BA2BB !important;
 }
 
+.logo img {
+    /* width: 240px; */
+    height: 90px;
+    position: relative;
+    
+}
+
+.logo img:hover {
+    border-color: white !important; /* Cambia el color del borde a blanco en hover */
+    border: 0.5px groove !important;
+  }
