@@ -2,26 +2,46 @@
     <nav class="inner-container">
         <div class="container-fluid logo-container">
             <div class="logo">
-                <img class="border border-dark border-opacity-25 rounded-pill" src="assets/logo/logo.png" alt="Logo" [routerLink]="['/home']">
+                <img class="border border-dark border-opacity-25 rounded-pill" src="assets/logo/logo.png" alt="Logo"
+                    [routerLink]="['/home']" (click)="scrollToTop()">
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container me-5 pe-5">
 
-            <div class=" row row-fluid">
+            <div class="row justify-content-end ">
 
-                <div class="col-1"></div>
+                <!-- <div class="col-1"></div> -->
 
-                <div class="col-2 px-0">
+                <!-- <div class="col-2 px-0">
                     <button type="button" class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill">Acerca</button>
-                </div>
+                </div> -->
 
-                <div class="col-2 px-0 ">
-                    <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button" [routerLink]="['/service']" routerLinkActive="active">
-                        Servicios
-                    </a>
-                </div>
+                <ng-container class="mt-2">
 
-                <div class="col-2 px-0">
+                    <div class="col-2">
+                        <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button"
+                            [routerLink]="['/service']" routerLinkActive="active" (click)="scrollToTop()">
+                            Servicios
+                        </a>
+                    </div>
+
+                    <div class="col-2">
+                        <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button"
+                            [routerLink]="['/contacto']" routerLinkActive="active" (click)="scrollToTop()">
+                            Contacto
+                        </a>
+                    </div>
+
+
+                    <div class="col-1">
+                        <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button"
+                            (click)="serv.goToInstragram()">
+                            <i class="fab fa-instagram fa-lg mt-2"></i>
+                            <!-- <i class="fab fa-instagram-square fa-lg mt-2"></i> -->
+                        </a>
+                    </div>
+                </ng-container>
+                <!-- <div class="col-2 px-0">
                     <div class="dropdown">
                         <button class="btn fw-medium btn-light dropdown-toggle border-dark border-opacity-10 rounded-pill" type="button" id="otrosDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -33,14 +53,14 @@
                             <li><a class="dropdown-item" href="#">Los que quieras</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="col-1"></div>
+                <!-- <div class="col-1"></div> -->
 
-                <div class="col-2 px-0">
+                <div class="col-2">
                     <div class="contact-container">
                         <div class="contact-number">
-                            <a (click)="serv.onLinkClick()">
+                            <a (click)="serv.goToWhatsapp()">
                                 <i class="fab fa-whatsapp fa-lg"></i>&nbsp;(569) 900408203
                             </a>
                         </div>
