@@ -19,4 +19,8 @@ export class AppserviceService {
     window.open(url, '_blank');  // Abre enlace en nueva pestaña
   }
 
+  goToDentalink(): void {
+    const url = 'https://ff.healthatom.io/2WFxZm';
+    window.open(url, '_blank');  // Abre enlace en nueva pestaña
+  }
 }

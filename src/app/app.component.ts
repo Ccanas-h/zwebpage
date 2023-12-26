@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./modules/interfaz/components/navbar/navbar/navbar.component";
+import { AppserviceService } from './modules/interfaz/services/appservice.service';
 
 @Component({
     selector: 'app-root',
@@ -12,4 +13,10 @@ import { NavbarComponent } from "./modules/interfaz/components/navbar/navbar/nav
 })
 export class AppComponent {
   title = 'zwebpage';
+
+
+  constructor(
+    public serv:AppserviceService,
+  ){}
+
 }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GooglemapComponent } from '../../ui/googlemap/googlemap.component';
 import { RouterModule } from '@angular/router';
+import { AppserviceService } from '../../services/appservice.service';
 
 @Component({
   selector: 'app-footer',
@@ -11,5 +12,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
+  
+  constructor(
+    public serv:AppserviceService,
+  ){}
 
 }
