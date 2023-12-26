@@ -13,49 +13,57 @@
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-8 col-xl-6">
 
+                    <!-- [ngClass]=" { 'was-validated' : myForm?.submitted } " -->
 
-                    <form id="contactForm">
-                        <!-- Name input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." />
-                            <label for="name">Tu Nombre</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                        </div>
-                        <!-- Email address input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="email" type="email" placeholder="name@example.com"
-                                data-sb-validations="required,email" />
-                            <label for="email">Tu Email</label>
-                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                        </div>
-                        <!-- Phone number input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" />
-                            <label for="phone">Tu Teléfono</label>
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
-                            </div>
-                        </div>
-                        <!-- Asunto input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." />
-                            <label for="name">Asunto</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                        </div>
-                        <!-- Message input-->
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" type="text"
-                                placeholder="Enter your message here..." style="height: 10rem"></textarea>
-                            <label for="message">Mensaje</label>
-                            <div class="invalid-feedback">A message is required.
-                            </div>
+                    <form id="contactForm" [formGroup]="form" (ngSubmit)="send()" novalidate #myForm="ngForm" >
+
+                        <div class="form-floating mb-3" [ngClass]=" { 'was-validated' : form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched) } ">
+                          <input class="form-control" id="name" type="text" formControlName="name" required/>
+                          <label for="name">Tu Nombre</label>
+                          <div class="invalid-feedback">
+                            Nombre requerido.
+                          </div>
                         </div>
 
-                        <!-- Submit Button-->
-                        <div class="d-grid"><button class="btn btn-lg btn-info text-white"
-                                 id="submitButton" type="submit">Enviar</button>
+                        <div class="form-floating mb-3" [ngClass]=" { 'was-validated' : form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched) } ">
+                          <input class="form-control" id="email" type="email" formControlName="email" required/>
+                          <label for="email">Tu Email</label>
+                          <div class="invalid-feedback">
+                            Email requerido.
+                          </div>
                         </div>
-                    </form>
+
+                        <div class="form-floating mb-3" [ngClass]=" { 'was-validated' : form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched)  }">
+                          <input class="form-control" id="phone" type="tel" formControlName="phone" required pattern="^[0-9]{1,11}$"/>
+                          <label for="phone">Tu Teléfono</label>
+                          <div class="invalid-feedback">
+                            Teléfono requerido. Ej: 5694334334
+                          </div>
+                        </div>
+
+                        <div class="form-floating mb-3" [ngClass]=" { 'was-validated' : form.get('subject')?.invalid && (form.get('subject')?.dirty || form.get('subject')?.touched) }" >
+                          <input class="form-control" id="subject" type="text" formControlName="subject" required maxlength="150"/>
+                          <label for="subject">Asunto</label>
+                          <div class="invalid-feedback">
+                            Asunto requerido.
+                          </div>
+                        </div>
+
+                        <div class="form-floating mb-3" [ngClass]=" { 'was-validated' : form.get('message')?.invalid && (form.get('message')?.dirty || form.get('message')?.touched) }">
+                          <textarea class="form-control" id="message" type="text" style="height: 10rem" formControlName="message" required maxlength="850"></textarea>
+                          <label for="message">Mensaje</label>
+                          <div class="invalid-feedback">
+                            Mensaje requerido.
+                          </div>
+                        </div>
+                      
+                        <div class="d-grid">
+                          <button class="btn btn-lg btn-info text-white" id="submitButton" type="submit">Enviar</button>
+                        </div>
+                      </form>
+                      
+
+
                 </div>
             </div>
         </div>
