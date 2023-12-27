@@ -12,7 +12,7 @@ import { AppserviceService } from './modules/interfaz/services/appservice.servic
     imports: [CommonModule, RouterOutlet, NavbarComponent]
 })
 export class AppComponent {
-  title = 'zwebpage';
+  title = 'duhalde-ortodoncia';
 
 
   constructor(
