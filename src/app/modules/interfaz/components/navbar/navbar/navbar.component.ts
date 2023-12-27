@@ -27,4 +27,13 @@ export class NavbarComponent {
     this.viewportScroller.scrollToPosition([0, 0]); // Desplaza a la posición (0, 0)
   }
 
+
+  scrollToBottom() {
+    // Obtén la altura total de la página
+    const scrollHeight = document.documentElement.scrollHeight;
+  
+    // Desplaza a la posición correspondiente a la parte inferior de la página
+    this.viewportScroller.scrollToPosition([0, scrollHeight]);
+  }
+
 }

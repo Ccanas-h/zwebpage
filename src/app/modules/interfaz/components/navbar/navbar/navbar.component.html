@@ -19,12 +19,6 @@
                 <ng-container class="mt-2">
 
                     <div class="col-2">
-                        <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button" action="javascript:void(0)" href="#ubicacionFooter">
-                            Ubicación
-                        </a>
-                    </div>
-
-                    <div class="col-2">
                         <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button"
                             [routerLink]="['/service']" routerLinkActive="active" (click)="scrollToTop()">
                             Servicios
@@ -35,6 +29,12 @@
                         <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button"
                             [routerLink]="['/contacto']" routerLinkActive="active" (click)="scrollToTop()">
                             Contacto
+                        </a>
+                    </div>
+
+                    <div class="col-2">
+                        <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button" (click)="scrollToBottom()">
+                            Ubicación
                         </a>
                     </div>
 
