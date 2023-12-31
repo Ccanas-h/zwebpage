@@ -29,7 +29,7 @@
 
 .logo-container {
     width: 439.98px;
-    padding-right: 199.98px;
+    /* padding-right: 199.98px; */
     justify-content: flex-start;
     align-items: center;
     display: inline-flex;

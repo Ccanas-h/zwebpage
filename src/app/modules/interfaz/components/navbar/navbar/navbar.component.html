@@ -1,4 +1,4 @@
-<div class="container-principal navbar-sticky border-bottom rounded-bottom border-opacity-10 ">
+<div class="container-principal navbar-sticky border-bottom rounded-bottom border-opacity-10">
     <nav class="inner-container">
         <div class="container-fluid logo-container">
             <div class="logo">
@@ -16,31 +16,33 @@
                     <button type="button" class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill">Acerca</button>
                 </div> -->
 
+                <!-- [ngClass]="{ 'btn-sm' : obtenerWidth() <= 1522 }" -->
+
                 <ng-container class="mt-2">
 
-                    <div class="col-2">
-                        <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button"
+                    <div class="col-md-2">
+                        <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button" 
                             [routerLink]="['/service']" routerLinkActive="active" (click)="scrollToTop()">
                             Servicios
                         </a>
                     </div>
 
-                    <div class="col-2">
-                        <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button"
+                    <div class="col-md-2" >
+                        <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button" 
                             [routerLink]="['/contacto']" routerLinkActive="active" (click)="scrollToTop()">
                             Contacto
                         </a>
                     </div>
 
-                    <div class="col-2">
-                        <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button" (click)="scrollToBottom()">
+                    <div class="col-md-2">
+                        <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button" 
+                            (click)="scrollToBottom()" >
                             Ubicación
                         </a>
                     </div>
 
-
-                    <div class="col-1">
-                        <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button"
+                    <div class="col-md-1">
+                        <a class="btn fw-medium btn-light border-dark border-opacity-10 rounded-pill" type="button" 
                             (click)="serv.goToInstragram()">
                             <i class="fab fa-instagram fa-lg mt-2"></i>
                             <!-- <i class="fab fa-instagram-square fa-lg mt-2"></i> -->
@@ -63,7 +65,7 @@
 
                 <!-- <div class="col-1"></div> -->
 
-                <div class="col-2">
+                <div class="col-md-2">
                     <div class="contact-container">
                         <div class="contact-number">
                             <a (click)="serv.goToDentalink()">
