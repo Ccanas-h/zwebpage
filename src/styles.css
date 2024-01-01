@@ -46,10 +46,10 @@ html * {
 
 
 .spacer {
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;  /* 100px / 16px (tamaño de fuente base) = 6.25rem */
+    height: 6.25rem; /* 100px / 16px (tamaño de fuente base) = 6.25rem */
     position: relative;
-}
+  }
 
 
 /* .carousel-control-prev-icon,

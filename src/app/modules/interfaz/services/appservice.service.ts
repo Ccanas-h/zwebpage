@@ -1,12 +1,32 @@
-import { Injectable } from '@angular/core';
+import { HostListener, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppserviceService {
 
+  
+  anchoPagina: number = document.body.clientWidth;
+
   constructor() { }
 
+
+  ngOnInit() {
+    // Obtener el ancho de la página al cargar el componente
+    this.calcularAnchoPagina();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    // Actualizar el ancho de la página cuando se redimensiona la ventana
+    this.calcularAnchoPagina();
+  }
+
+  calcularAnchoPagina() {
+    // Obtener el ancho del cuerpo (puede ajustarse según tu estructura HTML)
+    this.anchoPagina = document.body.clientWidth;
+    return this.anchoPagina; 
+  }
 
 
   goToWhatsapp(): void {

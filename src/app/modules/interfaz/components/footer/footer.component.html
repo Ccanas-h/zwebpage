@@ -1,76 +1,68 @@
-<div class="w-100 pt-5 px-3 footer"  id="ubicacionFooter" >
+<div class="w-100 pt-5 px-3 footer" id="ubicacionFooter">
 
-    <!-- <div class="spacer"></div> -->
-    <!-- <div class="tituloWhite text-center">Ubicación</div> -->
-  
-  
-    <div class="container-fluid">
-      <div class="row text-white">
-  
-        <div class="col-6 text-center">
-  
-          <div class="logo">
-            <img class="border border-dark border-opacity-25 rounded-pill" src="assets/logo/logo.png" alt="Logo" [routerLink]="['/home']">
-          </div>
-  
-          <h1 class="fw-medium my-4">¡Tu sonrisa, mi compromiso!</h1>
-          <h5 class="fw-light mb-4">¡Bienvenido a mi hogar dental! <br>Te espero en mi consulta dental a pasos de Metro Los
-            Leones.</h5>
-          <button type="button" class="btn btn-outline-info btn-lg text-white rounded-pill" (click)="serv.goToDentalink()">¡Agenda ahora!</button>
+  <!-- <div class="spacer"></div> -->
+  <!-- <div class="tituloWhite text-center">Ubicación</div> -->
+
+
+  <div class="container-fluid">
+    <div class="row text-white">
+
+      <div class="col-6 text-center">
+
+        <div class="logo">
+          <img class="border border-dark border-opacity-25 rounded-pill" src="assets/logo/logo.png" alt="Logo"
+            [routerLink]="['/home']">
         </div>
-  
-  
-        <div class="col-6">
-          <app-googlemap></app-googlemap>
-  
-          <div class="row row-fluid mt-3">
-  
-            <div class="col-12 align-items-center">
-              <p><i class="fas fa-map-marker-alt p-2 border rounded-circle"></i>&nbsp;&nbsp;Las Bellotas 199, Ofician 61,
-                Providencia, Santiago.</p>
-            </div>
-  
-            <div class="col-12 align-items-center">
-              <p type="tel"><i class="fas fa-phone-alt p-2 border rounded-circle"></i>&nbsp;&nbsp;+569 9629 8044 </p>
-            </div>
-  
-            <div class="col-12 align-items-center">
-              <p><i class="far fa-clock p-2 border rounded-circle"></i>&nbsp;&nbsp;Lunes-Viernes 7:30am-4pm, Viernes
-                8am-2pm</p>
-            </div>
-          </div>
-  
-        </div>
-  
+
+        <h1 class="fw-medium my-4">¡Tu sonrisa, mi compromiso!</h1>
+        <h5 class="fw-light mb-4">¡Bienvenido a mi hogar dental! <br>Te espero en mi consulta dental a pasos de Metro
+          Los
+          Leones.</h5>
+        <button type="button" class="btn btn-outline-info btn-lg text-white rounded-pill"
+          (click)="serv.goToDentalink()">¡Agenda ahora!</button>
       </div>
+
+
+      <div class="col-6">
+        <app-googlemap></app-googlemap>
+
+        <div class="row row-fluid mt-3">
+
+          <div class="col-12 align-items-center">
+            <p><i class="fas fa-map-marker-alt p-2 border rounded-circle"></i>&nbsp;&nbsp;Las Bellotas 199, Ofician 61,
+              Providencia, Santiago.</p>
+          </div>
+
+          <div class="col-12 align-items-center">
+            <p type="tel"><i class="fas fa-phone-alt p-2 border rounded-circle"></i>&nbsp;&nbsp;+569 9629 8044 </p>
+          </div>
+
+          <div class="col-12 align-items-center">
+            <p><i class="far fa-clock p-2 border rounded-circle"></i>&nbsp;&nbsp;Lunes-Viernes 7:30am-4pm, Viernes
+              8am-2pm</p>
+          </div>
+        </div>
+
+      </div>
+
     </div>
-  
-  
-    <hr class="border border-white border-1 opacity-50">
-  
-  
-  
-    <!-- <div>
-      <div style="width: 1920px; height: 1px; background: white"></div>
-      <div style="width: 231.69px; height: 25px; color: white; font-size: 16px; font-family: Jost; font-weight: 400; line-height: 25px; word-wrap: break-word">© Sparks Precision Dental 2023 | </div>
-      <div style="width: 14.34px; height: 25px; color: white; font-size: 16px; font-family: Jost; font-weight: 400; line-height: 25px; word-wrap: break-word"> | </div>
-      <div style="width: 259.69px; height: 25px; text-align: right; color: white; font-size: 17px; font-family: Jost; font-weight: 400; line-height: 25px; word-wrap: break-word">Dental Web Design & Marketing by </div>
-      <div style="width: 64.51px; height: 24px; text-align: right; color: white; font-size: 17px; font-family: Jost; font-weight: 400; line-height: 25px; word-wrap: break-word">:Delmain</div>
-      <div style="width: 92.22px; height: 23px; color: white; font-size: 16px; font-family: Jost; font-weight: 400; line-height: 25px; word-wrap: break-word">Privacy Policy</div>
-      <div style="width: 153.62px; height: 23px; color: white; font-size: 16px; font-family: Jost; font-weight: 400; line-height: 25px; word-wrap: break-word">Accessibility Statement</div>
-  </div> -->
+  </div>
+
+
+  <hr class="border border-white border-1 opacity-50">
+
 
 
   <div class="container h-25">
     <div class="row justify-content-between text-white">
 
-      <div class="col-3">
-        <p>© Dra Luz Duhalde 2023 </p>
+      <div class="col-6 col-lg-3">
+        <p [style.font-size.px]=" serv.calcularAnchoPagina() < 1000 ? '10' : null">© Dra Luz Duhalde 2023 </p>
       </div>
 
 
-      <div class="col-3">
-        Diseño Web Dental: Cristóbal Cañas
+      <div class="col-6 col-lg-3">
+        <p [style.font-size.px]=" serv.calcularAnchoPagina() < 1000 ? '10' : null">Diseño Web Dental: Cristóbal Cañas</p>
       </div>
 
     </div>
@@ -78,6 +70,6 @@
 
   </div>
 
-  
-  
-  </div>
+
+
+</div>
