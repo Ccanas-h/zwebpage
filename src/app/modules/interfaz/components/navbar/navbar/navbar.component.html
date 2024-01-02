@@ -88,43 +88,72 @@
 
 
 <ng-template #mobile>
-<nav class="navbar bg-body-tertiary fixed-top">
+<nav class="navbar  backgroundPiel fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Offcanvas navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <a class="navbar-brand fw-light fs-2" [routerLink]="['/home']" (click)="scrollToTop()" >Duhalde Ortodoncia</a>
+      <button class="navbar-toggler backgroundVerdeAgua rounded-pill" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <div class="offcanvas-header backgroundPiel">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Duhalde Ortodoncia</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              
+              <a class="nav-link active" aria-current="page" [routerLink]="['/home']" routerLinkActive="active" (click)="scrollToTop()" data-bs-dismiss="offcanvas">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" [routerLink]="['/service']" routerLinkActive="active" (click)="scrollToTop()" data-bs-dismiss="offcanvas">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/contacto']" routerLinkActive="active" (click)="scrollToTop()" data-bs-dismiss="offcanvas">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="scrollToBottom()" data-bs-dismiss="offcanvas">Ubicación</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="serv.goToInstragram()" data-bs-dismiss="offcanvas">Instagram&nbsp;<i class="fab fa-instagram fa-lg mt-2"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="serv.goToWhatsapp()" data-bs-dismiss="offcanvas">Whatsapp&nbsp;<i class="fab fa-whatsapp fa-lg"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="serv.goToDentalink()" data-bs-dismiss="offcanvas">¡Agenda Ahora!&nbsp;<i class="far fa-calendar-check fa-lg"></i></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                Listado servicios
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item">Limpiezas y Exámenes</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item">Empastes dentales</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item">Tratamientos de encías</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item">Extracción de dientes</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item">Coronas</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item">Carillas</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item">Invisalign</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item">Blanqueamiento dental</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item">Implantes</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item">Prótesis dentales retenidas por implantes</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item">Odontología de emergencia</a></li>
               </ul>
+              
             </li>
           </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+
         </div>
       </div>
     </div>

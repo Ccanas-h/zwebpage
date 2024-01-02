@@ -33,7 +33,7 @@
 }
 
 .title-container {
-    width: 40rem;
+    /* width: 40rem; */
     height: 13rem;
     position: relative;
     flex-direction: column;
@@ -43,7 +43,7 @@
 }
 
 .title {
-    width: 36.665rem;
+    /* width: 36.665rem; */
     height: 2.3125rem;
     color: #1BA2BB;
     font-size: 1.4375rem;
@@ -55,7 +55,7 @@
 }
 
 .sub-title {
-    width: 36.2575rem; /* 578.12px / 16px (tamaño de fuente raíz) */
+    /* width: 36.2575rem;  */
     height: 5.4375rem; /* 87px / 16px (tamaño de fuente raíz) */
     color: black;
     font-size: 3.75rem; /* 60px / 16px (tamaño de fuente raíz) */
@@ -66,10 +66,19 @@
     white-space: nowrap;
 }
 
+.sub-title-mobile {
+    /* width: 36.2575rem;  */
+    color: black;
+    font-size: 3rem; /* 60px / 16px (tamaño de fuente raíz) */
+    font-family: Jost;
+    font-weight: 600;
+    /* word-wrap: break-word; */
+}
+
 .contact-container {
     align-self: stretch;
     height: 3.6875rem; /* 59px / 16px (tamaño de fuente raíz) */
-    padding-right: 28.546875rem; /* 456.75px / 16px (tamaño de fuente raíz) */
+    /* padding-right: 28.546875rem;  */
     justify-content: flex-start;
     align-items: center;
     display: inline-flex;
@@ -77,10 +86,21 @@
 
 
 .phone-box {
-    margin-top: 1.25rem; /* 20px / 16px (tamaño de fuente raíz) */
+    margin-top: 5rem; /* 20px / 16px (tamaño de fuente raíz) */
     height: 3.1875rem; /* 51px / 16px (tamaño de fuente raíz) */
     padding-left: 1.625rem; /* 26px / 16px (tamaño de fuente raíz) */
-    padding-right: 1.60625rem; /* 25.7px / 16px (tamaño de fuente raíz) */
+    padding-right: 1.60625rem; 
+    background: #1BA2BB;
+    border-radius: 1.875rem; /* 30px / 16px (tamaño de fuente raíz) */
+    align-items: center;
+    display: inline-flex;
+}
+
+.phone-box-mobile {
+    /* margin-top: 5rem;  */
+    height: 3.1875rem; /* 51px / 16px (tamaño de fuente raíz) */
+    padding-left: 1.625rem; /* 26px / 16px (tamaño de fuente raíz) */
+    padding-right: 1.60625rem; 
     background: #1BA2BB;
     border-radius: 1.875rem; /* 30px / 16px (tamaño de fuente raíz) */
     align-items: center;
@@ -108,7 +128,15 @@
 
 .image {
     /* width: 39.625rem; */ /* 634px / 16px (tamaño de fuente raíz) */
-    border-radius: 0.9375rem; /* 15px / 16px (tamaño de fuente raíz) */
-    height: 44rem; /* 725px / 16px (tamaño de fuente raíz) */
+    border-radius: 0.9375rem;
     position: relative;
+    height: 44rem;
+    /* height: auto;  */
+
+
 }
+
+
+.max-height-28rem {
+    max-height: 28rem !important;
+  }

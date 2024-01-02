@@ -1,1 +1,4 @@
-<div id="map"></div>
+<div id="map" [ngClass]="{ 
+    'width100' : serv.calcularAnchoPagina() < 1000,
+    'mapbox' : serv.calcularAnchoPagina() >= 1000
+    }"></div>

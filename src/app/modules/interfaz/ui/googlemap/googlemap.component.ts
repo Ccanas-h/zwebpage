@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 // import * as mapboxgl from 'mapbox-gl';
 import mapboxgl from 'mapbox-gl';
+import { AppserviceService } from '../../services/appservice.service';
 @Component({
   selector: 'app-googlemap',
   standalone: true,
@@ -12,7 +13,7 @@ import mapboxgl from 'mapbox-gl';
 
 export class GooglemapComponent implements OnInit {
 
-
+  serv = inject(AppserviceService);
 
 
   ngOnInit(): void {

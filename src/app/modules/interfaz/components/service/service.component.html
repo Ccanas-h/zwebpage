@@ -1,6 +1,10 @@
-<div name="services" class="w-100 px-5 bg-white">
+<div name="services" class="w-100  bg-white" 
+[ngClass]="{ 
+  'px-0' : serv.calcularAnchoPagina() < 1000, 
+  'px-5' : serv.calcularAnchoPagina() >= 1000
+   }">
 
-    <div class="d-flex justify-content-center mx-auto h-full">
+    <div class="d-flex justify-content-center mx-auto h-full" [ngClass]="{ 'pt-4' : serv.calcularAnchoPagina() < 1000 }">
         <div class="h1 my-5" style="color:#1BA2BB !important;">Mis Servicios Dentales</div>
       </div>
 
@@ -8,18 +12,18 @@
       <div class="container text-center">
         <div class="row">
 
-          <div class="col-4">
+          <div class="col-6 col-lg-4">
 
             <div class="card mb-3 border-light backgroundPiel">
                 <div class="row no-gutters align-items-center">
                   <div class="col-md-4">
-                    <img src="assets/svg/limpiando.svg" class="card-img" alt="..." style="margin-left: 1rem" >
+                    <img src="assets/svg/limpiando.svg" class="card-img" alt="..." [ngClass]="{ 'margin-left-card' : serv.calcularAnchoPagina() >= 1000 }">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
                       <h5 class="card-title purpleColor">Limpiezas y Exámenes</h5>
                         <p class="card-text text-center">Las limpiezas y exámenes rutinarios te ayudan a mantener una sonrisa saludable de por vida.</p>
-                      <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+                      <!-- <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p> -->
                     </div>
                   </div>
                 </div>
@@ -27,18 +31,18 @@
 
           </div>
 
-          <div class="col-4">
+          <div class="col-6 col-lg-4">
 
             <div class="card mb-3 border-light">
                 <div class="row no-gutters align-items-center">
                   <div class="col-md-4">
-                    <img src="assets/svg/empaste-dental.svg" class="card-img" alt="..." style="margin-left: 1rem" >
+                    <img src="assets/svg/empaste-dental.svg" class="card-img" alt="..." [ngClass]="{ 'margin-left-card' : serv.calcularAnchoPagina() >= 1000 }">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
                       <h5 class="card-title purpleColor">Empastes dentales</h5>
                         <p class="card-text text-center">Reparan dientes dañados y caries, y restauran la apariencia y función de tu sonrisa.</p>
-                      <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+                      <!-- <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p> -->
                     </div>
                   </div>
                 </div>
@@ -46,18 +50,18 @@
 
           </div>
 
-          <div class="col-4">
+          <div class="col-6 col-lg-4">
             
             <div class="card mb-3 border-light backgroundPiel">
                 <div class="row no-gutters align-items-center">
                   <div class="col-md-4">
-                    <img src="assets/svg/tratamiento-encia.svg" class="card-img" alt="..." style="margin-left: 1rem">
+                    <img src="assets/svg/tratamiento-encia.svg" class="card-img" alt="..." [ngClass]="{ 'margin-left-card' : serv.calcularAnchoPagina() >= 1000 }">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
                       <h5 class="card-title purpleColor">Tratamientos de encías</h5>
                         <p class="card-text text-center">Tratan infecciones en tus encías y tejido bucal, y eliminan la acumulación de placa y sarro.</p>
-                      <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+                      <!-- <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p> -->
                     </div>
                   </div>
                 </div>
@@ -66,19 +70,19 @@
           </div>
 
 
-          <div class="col-4">
+          <div class="col-6 col-lg-4">
             
             <div class="card mb-3 border-light">
                 <div class="row no-gutters align-items-center">
                   <div class="col-md-4">
-                    <img src="assets/svg/remover-diente.svg" class="card-img" alt="..." style="margin-left: 1rem">
+                    <img src="assets/svg/remover-diente.svg" class="card-img" alt="..." [ngClass]="{ 'margin-left-card' : serv.calcularAnchoPagina() >= 1000 }">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
                       <h5 class="card-title purpleColor">Extracción de dientes</h5>
                         <p class="card-text text-center">Tenemos la experiencia para extraer de forma cómoda dientes dañados o problemáticos, para que puedas recuperar tu sonrisa.
                         </p>
-                      <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+                      <!-- <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p> -->
                     </div>
                   </div>
                 </div>
@@ -86,19 +90,19 @@
 
           </div>
 
-          <div class="col-4">
+          <div class="col-6 col-lg-4">
             
             <div class="card mb-3 border-light backgroundPiel">
                 <div class="row no-gutters align-items-center">
                   <div class="col-md-4">
-                    <img src="assets/svg/coronas.svg" class="card-img" alt="..." style="margin-left: 1rem">
+                    <img src="assets/svg/coronas.svg" class="card-img" alt="..." [ngClass]="{ 'margin-left-card' : serv.calcularAnchoPagina() >= 1000 }">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
                       <h5 class="card-title purpleColor">Coronas</h5>
                         <p class="card-text text-center">Las coronas restauran la funcionalidad y la apariencia de tu diente y, a menudo, son el último paso de un tratamiento de conducto o implante.
                         </p>
-                      <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+                      <!-- <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p> -->
                     </div>
                   </div>
                 </div>
@@ -106,19 +110,19 @@
 
           </div>
 
-          <div class="col-4">
+          <div class="col-6 col-lg-4">
             
             <div class="card mb-3 border-light">
                 <div class="row no-gutters align-items-center">
                   <div class="col-md-4">
-                    <img src="assets/svg/carillas.svg" class="card-img" alt="..." style="margin-left: 1rem">
+                    <img src="assets/svg/carillas.svg" class="card-img" alt="..." [ngClass]="{ 'margin-left-card' : serv.calcularAnchoPagina() >= 1000 }">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
                       <h5 class="card-title purpleColor">Carillas</h5>
                         <p class="card-text text-center">Consigue la sonrisa que siempre has deseado con carillas que cubren sin problemas la parte frontal de los dientes dañados o descoloridos.
                         </p>
-                      <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+                      <!-- <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p> -->
                     </div>
                   </div>
                 </div>
@@ -127,19 +131,19 @@
           </div>
 
 
-          <div class="col-4">
+          <div class="col-6 col-lg-4">
             
             <div class="card mb-3 border-light backgroundPiel">
                 <div class="row no-gutters align-items-center">
                   <div class="col-md-4">
-                    <img src="assets/svg/invisalign.svg" class="card-img" alt="..." style="margin-left: 1rem">
+                    <img src="assets/svg/invisalign.svg" class="card-img" alt="..." [ngClass]="{ 'margin-left-card' : serv.calcularAnchoPagina() >= 1000 }">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
                       <h5 class="card-title purpleColor">Invisalign</h5>
                         <p class="card-text text-center">Consigue una sonrisa más recta sin los voluminosos aparatos de metal. Invisalign es la opción recomendada número 1.
                         </p>
-                      <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+                      <!-- <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p> -->
                     </div>
                   </div>
                 </div>
@@ -148,19 +152,19 @@
           </div>
 
           
-          <div class="col-4">
+          <div class="col-6 col-lg-4">
             
             <div class="card mb-3 border-light">
                 <div class="row no-gutters align-items-center">
                   <div class="col-md-4">
-                    <img src="assets/svg/blanqueamiento.svg" class="card-img" alt="..." style="margin-left: 1rem">
+                    <img src="assets/svg/blanqueamiento.svg" class="card-img" alt="..." [ngClass]="{ 'margin-left-card' : serv.calcularAnchoPagina() >= 1000 }">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
                       <h5 class="card-title purpleColor">Blanqueamiento dental</h5>
                         <p class="card-text text-center">Resalta tus blancos nacarados con un blanqueamiento dental profesional. Opciones en el consultorio y para llevar a casa.
                         </p>
-                      <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+                      <!-- <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p> -->
                     </div>
                   </div>
                 </div>
@@ -170,18 +174,18 @@
 
 
 
-          <div class="col-4">
+          <div class="col-6 col-lg-4">
             
             <div class="card mb-3 border-light backgroundPiel">
                 <div class="row no-gutters align-items-center">
                   <div class="col-md-4">
-                    <img src="assets/svg/implantes.svg" class="card-img" alt="..." style="margin-left: 1rem">
+                    <img src="assets/svg/implantes.svg" class="card-img" alt="..." [ngClass]="{ 'margin-left-card' : serv.calcularAnchoPagina() >= 1000 }">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
                       <h5 class="card-title purpleColor">Implantes</h5>
                         <p class="card-text text-center">El estándar de oro para reemplazar dientes faltantes o dañados. Pon nuestra experiencia al servicio de tu sonrisa.</p>
-                      <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+                      <!-- <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p> -->
                     </div>
                   </div>
                 </div>
@@ -190,18 +194,18 @@
           </div>
 
 
-          <div class="col-4">
+          <div class="col-6 col-lg-4">
             
             <div class="card mb-3 border-light">
                 <div class="row no-gutters align-items-center">
                   <div class="col-md-4">
-                    <img src="assets/svg/protesis.svg" class="card-img" alt="..." style="margin-left: 1rem">
+                    <img src="assets/svg/protesis.svg" class="card-img" alt="..." [ngClass]="{ 'margin-left-card' : serv.calcularAnchoPagina() >= 1000 }">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
                       <h5 class="card-title purpleColor">Prótesis dentales retenidas por implantes</h5>
                         <p class="card-text text-center">La solución moderna para prótesis dentales. ¡Excelente para tu salud y estilo de vida! Reemplaza uno o varios dientes.</p>
-                      <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+                      <!-- <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p> -->
                     </div>
                   </div>
                 </div>
@@ -211,18 +215,18 @@
 
 
           
-          <div class="col-4">
+          <div class="col-6 col-lg-4">
             
             <div class="card mb-3 border-light backgroundPiel">
                 <div class="row no-gutters align-items-center">
                   <div class="col-md-4">
-                    <img src="assets/svg/emergencia.svg" class="card-img" alt="..." style="margin-left: 1rem">
+                    <img src="assets/svg/emergencia.svg" class="card-img" alt="..." [ngClass]="{ 'margin-left-card' : serv.calcularAnchoPagina() >= 1000 }">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
                       <h5 class="card-title purpleColor">Odontología de emergencia</h5>
                         <p class="card-text text-center">Estamos aquí para ti cuando más nos necesites. Ponte en contacto para recibir atención rápida y confiable.</p>
-                      <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+                      <!-- <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p> -->
                     </div>
                   </div>
                 </div>

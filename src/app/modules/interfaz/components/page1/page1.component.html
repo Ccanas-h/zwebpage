@@ -1,14 +1,16 @@
-<div class="spacer"></div>
 
-<div name="about" class="w-100 px-5 bg-white">
+<div name="about" class="w-100 px-5 pt-5 bg-white">
 
   <div class="d-flex justify-content-center mx-auto h-full">
     <div class="titulo">Sobre mí</div>
   </div>
 
-  <div class="container text-center my-5 w-50">
-    <div class="row">
-      <div class="col-6 text-start">
+  <div class="container text-center mb-5 w-50" [ngClass]="{ 'w-100' :  serv.calcularAnchoPagina() < 1300 }">
+    <div class="row" [ngClass]="{ 'mt-5' :  serv.calcularAnchoPagina() >= 1300 }">
+      <div class="col-12 mb-3" *ngIf="  serv.calcularAnchoPagina() < 1300 ; else aboutMobile  ">
+        <img class="aboutImage" src="assets/images/about.jpeg" alt="Placeholder Image" />
+      </div>
+      <div class="col-12 col-lg-6 text-start">
         Mi nombre es <b>Luz Duhalde</b>, soy especialista en Ortodoncia y Ortodopedia Dentomáxilofacial.
         <br><br>
 
@@ -23,9 +25,11 @@
         tratamiento de ortodoncia, al comparar el estado actual del paciente con su planificación digital y
         analizar los contactos entre los dientes.
       </div>
-      <div class="col-6">
-        <img class="aboutImage" src="assets/images/about.jpeg" alt="Placeholder Image" />
-      </div>
+      <ng-template #aboutMobile>
+        <div class="col-6">
+          <img class="aboutImage" src="assets/images/about.jpeg" alt="Placeholder Image" />
+        </div>
+      </ng-template>
     </div>
   </div>
 
@@ -43,106 +47,118 @@
     </div> -->
 
 
-<div name="rating" class="w-100 p-5 seccion">
+<div name="rating" class="w-100 backgroundPiel" [ngClass]="{ 'p-5' : serv.calcularAnchoPagina() >= 1300  }">
 
-  <div class="container my-3 w-50">
+  <div class="container py-3 w-50" [ngClass]="{ 'w-100' : serv.calcularAnchoPagina() < 1300  }">
     <div class="row">
-      <div class="col-1"></div>
+      <div class="col-12">
 
-      <div class="col-10">
-        <div class="mb-4 text-center titulo">Testimonios</div>
+        <div class="d-flex justify-content-center h-full">
+          <div class="mb-4 ms-2 text-start titulo me-5">Testimonios</div>
+        </div>
 
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-pause="hover">
-          <div class="carousel-inner">
+      </div>
 
-            <div class="carousel-item active" data-bs-interval="10000">
 
-              <div class="card mb-3">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="assets/images/home.jpeg" class="card-img" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <!-- <h5 class="card-title">Luz Duhalde</h5> -->
-                      <div class="mb-3 mt-3">
-                        <i class="fas fa-quote-left" style="float: left !important;"></i>
+
+
+      <div class="col-12">
+
+        <div class="d-flex justify-content-center mx-auto h-full">
+
+          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-pause="hover">
+            <div class="carousel-inner">
+
+              <div class="carousel-item active" data-bs-interval="10000">
+
+                <div class="card mb-3">
+                  <div class="row no-gutters">
+                    <div class="col-md-4" *ngIf=" serv.calcularAnchoPagina() >= 1300 ">
+                      <img src="assets/images/home.jpeg" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <!-- <h5 class="card-title">Luz Duhalde</h5> -->
+                        <div class="mb-3 mt-3">
+                          <i class="fas fa-quote-left" style="float: left !important;"></i>
+                          <br>
+                          <p class="card-text text-center">This is a wider card with supporting text below as a natural
+                            lead-in to additional content. This content is a little bit longer.</p>
+                          <i class="fas fa-quote-right" style="float: right !important;"></i>
+                        </div>
                         <br>
-                        <p class="card-text text-center">This is a wider card with supporting text below as a natural
-                          lead-in to additional content. This content is a little bit longer.</p>
-                        <i class="fas fa-quote-right" style="float: right !important;"></i>
+                        <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+
                       </div>
-                      <br>
-                      <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
-
                     </div>
                   </div>
                 </div>
+
               </div>
 
-            </div>
+              <div class="carousel-item" data-bs-interval="20000">
 
-            <div class="carousel-item" data-bs-interval="20000">
-
-              <div class="card mb-3">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="assets/images/about.jpeg" class="card-img" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Luz Duhalde, 33 años.</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+                <div class="card mb-3">
+                  <div class="row no-gutters">
+                    <div class="col-md-4" *ngIf=" serv.calcularAnchoPagina() >= 1300 ">
+                      <img src="assets/images/about.jpeg" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Luz Duhalde, 33 años.</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                          additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+                      </div>
                     </div>
                   </div>
                 </div>
+
               </div>
 
-            </div>
-
-            <div class="carousel-item" data-bs-interval="10000">
-              <div class="card mb-3">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="assets/images/home.jpeg" class="card-img" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <!-- <h5 class="card-title">Luz Duhalde</h5> -->
-                      <div class="mb-3 mt-3">
-                        <i class="fas fa-quote-left" style="float: left !important;"></i>
+              <div class="carousel-item" data-bs-interval="10000">
+                <div class="card mb-3">
+                  <div class="row no-gutters">
+                    <div class="col-md-4" *ngIf=" serv.calcularAnchoPagina() >= 1300 ">
+                      <img src="assets/images/home.jpeg" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <!-- <h5 class="card-title">Luz Duhalde</h5> -->
+                        <div class="mb-3 mt-3">
+                          <i class="fas fa-quote-left" style="float: left !important;"></i>
+                          <br>
+                          <p class="card-text text-center">This is a wider card with supporting text below as a natural
+                            lead-in to additional content. This content is a little bit longer.</p>
+                          <i class="fas fa-quote-right" style="float: right !important;"></i>
+                        </div>
                         <br>
-                        <p class="card-text text-center">This is a wider card with supporting text below as a natural
-                          lead-in to additional content. This content is a little bit longer.</p>
-                        <i class="fas fa-quote-right" style="float: right !important;"></i>
-                      </div>
-                      <br>
-                      <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
+                        <p class="card-text text-center"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
 
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
 
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
 
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
 
 
       </div>
 
-      <div class="col-1"></div>
+
     </div>
   </div>
 
@@ -150,5 +166,3 @@
 </div>
 
 <app-footer></app-footer>
-
-

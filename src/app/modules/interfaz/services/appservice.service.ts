@@ -11,9 +11,9 @@ export class AppserviceService {
   constructor() { }
 
 
-  ngOnInit() {
+  ngAfterViewInit() {
     // Obtener el ancho de la página al cargar el componente
-    this.calcularAnchoPagina();
+      this.calcularAnchoPagina();
   }
 
   @HostListener('window:resize', ['$event'])

@@ -1,6 +1,15 @@
-#map {
+
+.mapbox {
     height: 30vh;
     width: 70%; 
+    border-radius: 20px;
+    /* position: fixed; */
+    float: center;
+}
+
+.width100 {
+    height: 30vh;
+    width: 100% !important; 
     border-radius: 20px;
     /* position: fixed; */
     float: center;

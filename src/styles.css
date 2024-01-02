@@ -22,6 +22,10 @@ html * {
     background-color: #FFF7F0 !important;
 }
 
+.backgroundVerdeAgua {
+    background-color: #1BA2BB !important;
+}
+
 
 .titulo {
     height: 5.44rem; /* Ajusta la altura según tus necesidades */
@@ -64,7 +68,7 @@ html * {
 }
 
 
-.seccion {
+/* .seccion {
     width: 100%;
     height: 100%;
     padding-top: 15px;
@@ -74,7 +78,7 @@ html * {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-}
+} */
 
 
 .footer {

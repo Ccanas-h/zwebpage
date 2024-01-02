@@ -1,13 +1,10 @@
 .aboutImage {
     max-width: 100%;
     height: auto;
-    border-radius: 30px;
+    border-radius: 1.875rem; /* 30px / 16px (tamaño de fuente raíz) */
 }
 
-
 .imageCarousel {
-
-    width: 500px; /* Nuevo ancho deseado para la imagen */
-    height: auto; 
-      
-  }
+    width: 31.25rem; /* 500px / 16px (tamaño de fuente raíz) */
+    height: auto;
+}

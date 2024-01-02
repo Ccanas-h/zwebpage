@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
+import { AppserviceService } from '../../services/appservice.service';
 
 @Component({
   selector: 'app-service',
@@ -10,5 +11,7 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrl: './service.component.css'
 })
 export class ServiceComponent {
+
+  serv = inject(AppserviceService);
 
 }

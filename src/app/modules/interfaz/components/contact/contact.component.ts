@@ -1,8 +1,9 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
 import emailjs from '@emailjs/browser';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AppserviceService } from '../../services/appservice.service';
 
 @Component({
   selector: 'app-contact',
@@ -12,6 +13,8 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
+
+  serv = inject(AppserviceService);
 
   public form: FormGroup = this.fb.group({
 

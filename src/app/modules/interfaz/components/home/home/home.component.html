@@ -27,8 +27,8 @@
     <div class="container pt-3">
         <div class="row align-items-center">
 
-            <div class="col-6">
-                <div class="title-container">
+            <div class="col-12 col-lg-6">
+                <div class="title-container" *ngIf=" serv.calcularAnchoPagina() >= 1300; else mobile2 ">
                     <div class="title">Tranquilidad para tu sonrisa. Experta en cuidado dental. </div>
                     <div class="spacer"></div>
                     <div class="sub-title">Dentista de confianza</div>
@@ -36,9 +36,21 @@
                     <div class="title">Sonrisas sanas y seguras. </div>
 
                 </div>
+                <ng-template #mobile2>
+                    <div class="mt-5">
+                        <h3 class="purpleColor fw-semibold">Tranquilidad para tu sonrisa. Experta en cuidado dental.</h3>
+                        <div class="sub-title-mobile">Dentista de confianza</div>
+                        <h3 class="purpleColor fw-semibold">Sonrisas sanas y seguras.</h3>
+
+                    </div>
+                </ng-template>
+
                 <div class="contact-container">
                     <div>
-                        <div class="phone-box">
+                        <div class="phone-box" [ngClass]="{
+                            'phone-box' : serv.calcularAnchoPagina() >= 1300,
+                             'phone-box-mobile' : serv.calcularAnchoPagina() < 1300
+                        }">
                             <a class="phone-number" (click)="serv.goToWhatsapp()">
                                 <i class="fab fa-whatsapp"></i>&nbsp;(569) 900408203
                             </a>
@@ -47,8 +59,11 @@
                 </div>
             </div>
 
-            <div class="col-6">
-                <img class="image" src="assets/images/home.jpeg" alt="Placeholder Image" />
+            <div class="col-12 col-lg-6">
+                <img class="image img-fluid  mx-auto d-block" src="assets/images/home.jpeg" alt="Placeholder Image" 
+                [ngClass]="{ 
+                    'max-height-28rem my-3' :  serv.calcularAnchoPagina() < 1300
+                    }"/>
             </div>
 
         </div>
