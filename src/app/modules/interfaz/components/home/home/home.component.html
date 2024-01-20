@@ -13,7 +13,7 @@
                 <div class="contact-info">
                     <div class="phone-box">
                         <a class="phone-number" (click)="serv.goToWhatsapp()">
-                            <i class="fab fa-whatsapp"></i>&nbsp;(569) 900408203
+                            <i class="fab fa-whatsapp"></i>&nbsp;(569) 96298044
                         </a>
                     </div>
                 </div>
@@ -29,38 +29,51 @@
 
             <div class="col-12 col-lg-6">
                 <div class="title-container" *ngIf=" serv.calcularAnchoPagina() >= 1300; else mobile2 ">
-                    <div class="title">Tranquilidad para tu sonrisa. Experta en cuidado dental. </div>
+                    <div class="title">No pienses en tus dientes, piensa en tu sonrisa. </div>
+                    <div class="title">Ortodoncia avanzada. Sonrisas sanas. Sonrisas perfectas.</div>
                     <div class="spacer"></div>
-                    <div class="sub-title">Dentista de confianza</div>
-                    <div class="sub-title">en Chicureo</div>
-                    <div class="title">Sonrisas sanas y seguras. </div>
-
+                    <div class="sub-title">Sonríe con Confianza</div>
+                    <div class="sub-title">y Seguridad</div>
+                    <div class="title">Escríbenos y conversa con nosotros. </div>
+                    <!-- <div class="title" >Ven a tu evaluación sin costo</div>
+                    <div class="title" [style.font-size.px]="'18'">A Las Bellotas 199 of 61, Metro Los Leones, Providencia </div> -->
                 </div>
                 <ng-template #mobile2>
+                    <!-- No pienses en tus dientes, piensa en tu sonrisa.<br> -->
                     <div class="mt-5">
-                        <h3 class="purpleColor fw-semibold">Tranquilidad para tu sonrisa. Experta en cuidado dental.</h3>
-                        <div class="sub-title-mobile">Dentista de confianza</div>
-                        <h3 class="purpleColor fw-semibold">Sonrisas sanas y seguras.</h3>
+                        <h3 class="purpleColor fw-semibold" [style.font-size.px]="'18'">
+                            Ortodoncia avanzada. Sonrisas sanas. Sonrisas perfectas.</h3>
+                        <div class="sub-title-mobile">Sonríe con Confianza y Seguridad</div>
+                        <h3 class="purpleColor fw-semibold">Escríbenos y conversa con nosotros.</h3>
 
                     </div>
                 </ng-template>
 
-                <div class="contact-container">
+                <div class="contact-container" [ngClass]="{ 'mt-4' : serv.calcularAnchoPagina() >= 1300 }">
                     <div>
                         <div class="phone-box" [ngClass]="{
                             'phone-box' : serv.calcularAnchoPagina() >= 1300,
                              'phone-box-mobile' : serv.calcularAnchoPagina() < 1300
                         }">
                             <a class="phone-number" (click)="serv.goToWhatsapp()">
-                                <i class="fab fa-whatsapp"></i>&nbsp;(569) 900408203
+                                <i class="fab fa-whatsapp"></i>&nbsp;(569) 96298044
                             </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- *ngIf=" !(serv.calcularAnchoPagina() >= 1300)" -->
+                <div  [ngClass]="{ 'mt-4' : serv.calcularAnchoPagina() >= 1300 }">
+                    <h3 class=" fw-semibold" >Ven a tu evaluación sin costo</h3>
+                    <h3 class=" fw-semibold purpleColor" [style.font-size.px]="'18'">A Las Bellotas 199 of 61, Metro Los Leones, Providencia.</h3>
+                </div>
+
+
+
             </div>
 
             <div class="col-12 col-lg-6">
-                <img class="image img-fluid  mx-auto d-block" src="assets/images/home.jpeg" alt="Placeholder Image" 
+                <img class="image img-fluid  mx-auto d-block" src="assets/images/home2.jpg" alt="Placeholder Image" 
                 [ngClass]="{ 
                     'max-height-28rem my-3' :  serv.calcularAnchoPagina() < 1300
                     }"/>

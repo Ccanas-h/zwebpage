@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "./dist/duhalde-ortodoncia/browser",
+    "public": "dist/duhalde-ortodoncia/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

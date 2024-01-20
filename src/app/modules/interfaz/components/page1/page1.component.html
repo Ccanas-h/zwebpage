@@ -8,26 +8,22 @@
   <div class="container text-center mb-5 w-50" [ngClass]="{ 'w-100' :  serv.calcularAnchoPagina() < 1300 }">
     <div class="row" [ngClass]="{ 'mt-5' :  serv.calcularAnchoPagina() >= 1300 }">
       <div class="col-12 mb-3" *ngIf="  serv.calcularAnchoPagina() < 1300 ; else aboutMobile  ">
-        <img class="aboutImage" src="assets/images/about.jpeg" alt="Placeholder Image" />
+        <img class="aboutImage" src="assets/images/about2.jpg" alt="Placeholder Image" />
       </div>
       <div class="col-12 col-lg-6 text-start">
-        Mi nombre es <b>Luz Duhalde</b>, soy especialista en Ortodoncia y Ortodopedia Dentomáxilofacial.
+        Soy Cirujana Dentista de la Universidad de Concepción (2006) (distinción máxima) y Especialista en <b>Ortodoncia y Ortopedia Dentomaxilo Facial</b> de la Universidad de Chile (2015) (distinción máxima).
         <br><br>
-
-        Mi misión es diagnosticar y tratar todo tipo de maloclusiones dentarias y esqueléticas tanto en
-        <b>niños</b> como en <b>adultos</b>. Las alternativas de tratamiento que recomiendo dependen de la edad
-        del paciente, la complejidad de cada caso y las expectativas de cada paciente. Trabajo con todo tipos de
-        aparatos de ortodoncia y principalmente, con alineadores invisibles.
+        Cuento con <b>18 años de experiencia clínica</b> en servicios públicos y privados, realizando tratamientos complejos de ortodoncia y ortopedia maxilofacial.
         <br><br>
-        En mi consulta tengo el escáner intraoral <b>iTero Element 5D</b> que permite tener el flujo digital
-        completo para trabajar de la mejor manera con los alineadores invisibles. Además, nos entrega
-        herramientas que permiten realizar detección de caries en etapas tempranas, evaluación del progreso del
-        tratamiento de ortodoncia, al comparar el estado actual del paciente con su planificación digital y
-        analizar los contactos entre los dientes.
+        Me especializo en todo tipo de tratamientos de <b>ortodoncia y ortopedia, en particular, ortodoncia interceptiva, metálica, cerámica e invisalign</b>, éste último mediante alineadores invisibles y personalizados. Del mismo modo, realizo tratamientos de ortopedia tales como <b>disyunción palatina, máscaras de tracción, aparatos de avance mandibular y tratamientos complementarios con microtornillos.</b>
+        <br><br>
+        Mi objetivo fundamental es que mis pacientes tengan una <b>atención cercana, cálida y personalizada</b> y que, en definitiva, logren un cambio único en su vida mediante técnicas clínicas de ortodoncia avanzada.
+        Tengo <b>experiencia en niños con y sin necesidades especiales.</b>
+        
       </div>
       <ng-template #aboutMobile>
         <div class="col-6">
-          <img class="aboutImage" src="assets/images/about.jpeg" alt="Placeholder Image" />
+          <img class="aboutImage" src="assets/images/about2.jpg" alt="Placeholder Image" />
         </div>
       </ng-template>
     </div>
@@ -82,8 +78,8 @@
                         <div class="mb-3 mt-3">
                           <i class="fas fa-quote-left" style="float: left !important;"></i>
                           <br>
-                          <p class="card-text text-center">This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text text-center">Aqui la idea es que vayan recomendaciones de pacientes junto a fotos de ellos. 
+                            Las fotos pueden ser opcionales ahora e ir agregandolas con el tiempo. </p>
                           <i class="fas fa-quote-right" style="float: right !important;"></i>
                         </div>
                         <br>
@@ -106,8 +102,8 @@
                     <div class="col-md-8">
                       <div class="card-body">
                         <h5 class="card-title">Luz Duhalde, 33 años.</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                          additional content. This content is a little bit longer.</p>
+                        <p class="card-text text-center">Aqui la idea es que vayan recomendaciones de pacientes junto a fotos de ellos. 
+                          Las fotos pueden ser opcional ahora e ir agregandolas con el tiempo. </p>
                         <p class="card-text"><small class="text-muted">Luz Duhalde, 33 años.</small></p>
                       </div>
                     </div>
@@ -128,8 +124,8 @@
                         <div class="mb-3 mt-3">
                           <i class="fas fa-quote-left" style="float: left !important;"></i>
                           <br>
-                          <p class="card-text text-center">This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text text-center">Aqui la idea es que vayan recomendaciones de pacientes junto a fotos de ellos. 
+                            Las fotos pueden ser opcional ahora e ir agregandolas con el tiempo. </p>
                           <i class="fas fa-quote-right" style="float: right !important;"></i>
                         </div>
                         <br>
@@ -161,6 +157,14 @@
 
     </div>
   </div>
+
+
+</div>
+
+
+<div name="rating2" class="w-100 backgroundPiel" [ngClass]="{ 'p-5' : serv.calcularAnchoPagina() >= 1300  }">
+
+
 
 
 </div>
